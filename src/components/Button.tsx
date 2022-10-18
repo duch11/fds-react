@@ -1,24 +1,28 @@
 import React from 'react';
+import '../../node_modules/dkfds/dist/css/dkfds-virkdk.min.css'
 
 export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    backgroundColor?: string;
-    color?: string;
-    primary?: boolean;
-    size: string;
+   visual: 'primary' | 'secondary' | 'tertiary';
+   disabled: boolean
+   type: 'button' | 'submit' | 'reset'
+   label?: string
 }
 
-export const Button: React.FunctionComponent<IButtonProps> = (props) => {
-    const { children, backgroundColor, color, style } = props;
-
-    let _style: React.CSSProperties = style || {};
-
-    /** Override Defaults */
-    if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
-    if (color && _style) _style.color = color;
-
+const Button: React.FunctionComponent<IButtonProps> = (props) => {
+    const { children, label, visual, className} = props;
     return (
-        <button style={_style} {...props}>
+        <button {...props} className={'button button-' + visual + ' ' + className} >
             {children}
+            {label}
         </button>
     );
 };
+
+Button.defaultProps={
+    visual: 'primary',
+    disabled: false,
+    type: 'button',
+    className: ''
+}
+
+export {Button}

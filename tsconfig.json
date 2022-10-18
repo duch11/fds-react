@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "allowJs": true,
         "declaration": true,
         "esModuleInterop": true,
         "jsx": "react",
@@ -10,10 +11,12 @@
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noUnusedLocals": true,
+        "newLine": "lf",
         "outDir": "dist/esm",
         "sourceMap": true,
         "strict": true,
         "target": "es6"
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx"]
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["src/stories/*"]
 }
