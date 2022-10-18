@@ -9,8 +9,9 @@ npm run storybook
 ```
 
 ## Todo: 
-[x]: Buttons
-[ ]: Everything else
+
+[x] : Buttons
+[] : Everything else
 
 See the projects working examples here: [https://fds-react.holm.tech/](https://fds-react.holm.tech/) (I'll keep it updated as I go)
 
