@@ -1,0 +1,37 @@
+{
+    "name": "dkfds-react",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "version": "1.0.0",
+    "description": "A React component library for Fælles design system (FDS) for use in public faced projects in Denmark.",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "npm run clean && npm run prettify && npm run build:esm && npm run build:cjs",
+        "clean": "rm -rf dist/",
+        "prettify": "prettier --write src/",
+        "reinstall": "rm -rf node_modules/ && rm -f package-lock.json && npm install",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "author": "Jonas Ladefoged Holm",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.45",
+        "@types/react": "^17.0.37",
+        "@types/react-dom": "^17.0.11",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "typescript": "^4.5.2",
+        "prettier": "^2.7.1"
+    },
+    "peerDependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
