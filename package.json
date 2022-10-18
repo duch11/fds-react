@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/duch11/fds-react"
   },
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A React component library for Fælles design system (FDS) for use in public faced projects in Denmark.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
