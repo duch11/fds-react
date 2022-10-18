@@ -3,6 +3,8 @@ import React from 'react';
 export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     backgroundColor?: string;
     color?: string;
+    primary?: boolean;
+    size: string;
 }
 
 export const Button: React.FunctionComponent<IButtonProps> = (props) => {
