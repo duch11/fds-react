@@ -8,7 +8,7 @@ npm install
 npm run storybook
 ```
 
-## Todo: 
+## What works?: 
 
 - ✅ Buttons
 - ❌: Everything else
